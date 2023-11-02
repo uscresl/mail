@@ -1,0 +1,22 @@
+.DS_store
+.idea
+data/
+__pycache__
+wandb/
+tmp/
+.vscode/
+run_exp.sh
+
+# CMAES output
+out/
+
+# virtual env
+venv/
+
+# unwanted local files
+local_scripts/
+
+csv_files_local/
+pdf_files_local/
+
+slurm_logs/

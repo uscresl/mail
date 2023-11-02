@@ -1,0 +1,18 @@
+python goal_prox_il/goal_prox/main.py \
+--prefix=gaifo-deep \
+--env-name=DryCloth \
+--alg=gaifo-deep \
+--num-mini-batch=32 \
+--num-epochs=10 \
+--disc-lr=0.0001 \
+--entropy-coef=0.001 \
+--action-input=False \
+--gail-reward-norm=True \
+--traj-load-path=goal_prox_il/expert_datasets/drycloth_two_arm_11.pt \
+--num-processes=1 \
+--num-env-steps=510000 \
+--save-interval=32 \
+--eval-interval=32 \
+--traj-batch-size=64 \
+--seed=11 \
+--save-dir=./data/gaifo/

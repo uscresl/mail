@@ -1,0 +1,6 @@
+{
+  "conda_env": "rlf",
+  "cmds_loc": "examples/test_cmds/",
+  "wb_entity": "ctorl",
+  "proj_name": "deformable-soil",
+}
