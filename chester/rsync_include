@@ -1,1 +1,3 @@
-softgym/PyFlex/data
+GNS
+softgym/softgym/envs
+softgym/PyFlexRobotics/bindings/softgym_scenes

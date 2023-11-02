@@ -1,7 +1,0 @@
-data
-wandb
-MUJOCO_LOG.TXT
-__pycache__
-tags
-.DS_Store
-*.egg-info

@@ -97,11 +97,14 @@ def to_slurm_command(params, header, python_command="python", remote_dir='~/',
             options = ''
         sing_prefix = 'singularity exec {} {} {} /bin/bash -c'.format(options, '--nv' if use_gpu else '', simg_dir)
         sing_commands = list()
-        sing_commands.append('. ./prepare_1.0.sh')
+        if compile_script is None or 'prepare' not in compile_script :
+            # sing_commands.append('. ./prepare_1.0.sh')
+            sing_commands.append('. ./prepare.sh')
         if set_egl_gpu:
             sing_commands.append('export EGL_GPU=$SLURM_JOB_GRES')
+            sing_commands.append('echo $EGL_GPU')
         if compile_script is not None:
-            sing_commands.append('time ./' + compile_script)
+            sing_commands.append('./' + compile_script)
         if wait_compile is not None:
             sing_commands.append('sleep '+str(int(wait_compile)))
 

@@ -1,6 +1,0 @@
-gym
-opencv-python
-plotly
-torch
-torchvision
-tqdm

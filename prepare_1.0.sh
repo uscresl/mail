@@ -1,13 +1,9 @@
-# cd softgym
-# . prepare_1.0.sh
-# cd ..
-pyflexenvname=mail
-conda activate $pyflexenvname
-export PYTORCH_JIT=0
+PATH=~/miniconda3/bin:$PATH
+cd softgym
+. prepare_1.0.sh
+cd ..
 export PYFLEXROOT=${PWD}/softgym/PyFlex
-export PYTHONPATH=${PWD}/rlpyt_cloth:${PWD}:${PWD}/softgym:${PYFLEXROOT}/bindings/build:${PWD}/rlkit/rlkit:$PYTHONPATH
+export PYTHONPATH=${PWD}:${PWD}/softgym:${PYFLEXROOT}/bindings/build:$PYTHONPATH
 export LD_LIBRARY_PATH=${PYFLEXROOT}/external/SDL2-2.0.4/lib/x64:$LD_LIBRARY_PATH
-export MUJOCO_gl=egl
-export MUJOCO_GL=osmesa # This is for running the rlpyt code from the cloth manipulation paper
-export EGL_GPU=$CUDA_VISIBLE_DEVICES # This can be used for specifying the GPU used to run the environment.
-echo "Finished setting up environment variables for conda env ${pyflexenvname} on host ${HOSTNAME}."
+export EGL_GPU=$CUDA_VISIBLE_DEVICES
+echo "VCD prep Done!"

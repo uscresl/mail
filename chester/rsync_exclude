@@ -1,4 +1,6 @@
+softgym_rpad
 *.img
+datasets
 data
 data/yufei_s3_data
 data/yufei_seuss_data
@@ -11,3 +13,20 @@ build
 DPI-Net
 videos
 imgs
+planet
+cem
+curl
+dreamer
+drq
+experiments
+PDDM
+pouring
+ResRL
+rlkit
+rlpyt_cloth
+tests
+tmp
+softgym/softgym/cached_initial_states/*
+wandb
+data2
+datasets2
